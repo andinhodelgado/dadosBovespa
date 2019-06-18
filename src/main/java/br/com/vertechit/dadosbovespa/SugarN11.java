@@ -39,6 +39,9 @@ public class SugarN11 {
         Document doc = Jsoup.parse(driver.getPageSource());
 
         driver.quit();
+        if(driver != null){
+            driver.close();
+        }
         
         Elements tableElements = doc.select("table.fe_quotes");
         
